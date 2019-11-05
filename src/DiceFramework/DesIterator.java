@@ -13,7 +13,15 @@ public class DesIterator implements Iterator {
     
     De[] des;
     int position= 0;
-    
+
+    public De[] getDes() {
+        return des;
+    }
+
+    public void setDes(De[] des) {
+        this.des = des;
+    }
+
     public DesIterator(De[] listdes){
         this.des = listdes;
     }

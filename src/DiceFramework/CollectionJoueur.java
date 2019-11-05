@@ -20,6 +20,7 @@ public class CollectionJoueur implements CollectionsJeu {
         this.tailleIniTabJoueur = 10;
         this.tabJoueur = new Joueur[tailleIniTabJoueur];
     }
+
     
     public void ajouter(Joueur j){
         this.tabJoueur[this.indFin] = j;
@@ -37,5 +38,29 @@ public class CollectionJoueur implements CollectionsJeu {
     public Iterator creerIterateur() {
         return new JoueursIterator(this.tabJoueur);
     }
-    
+
+
+    public Joueur[] getTabJoueur() {
+        return tabJoueur;
+    }
+
+    public void setTabJoueur(Joueur[] tabJoueur) {
+        this.tabJoueur = tabJoueur;
+    }
+
+    public int getIndFin() {
+        return indFin;
+    }
+
+    public void setIndFin(int indFin) {
+        this.indFin = indFin;
+    }
+
+    public int getTailleIniTabJoueur() {
+        return tailleIniTabJoueur;
+    }
+
+    public void setTailleIniTabJoueur(int tailleIniTabJoueur) {
+        this.tailleIniTabJoueur = tailleIniTabJoueur;
+    }
 }

@@ -2,14 +2,16 @@ package Tests;
 
 import DiceFramework.CollectionDe;
 import DiceFramework.De;
-import junit.framework.TestCase;
+import org.junit.Test;
+
+import static junit.framework.Assert.assertTrue;
 
 /**
  * @author anhe Pascal
  * @version 1.0
  */
 
-public class CollectionDeTest extends TestCase {
+public class CollectionDeTest  {
 
     private CollectionDe tabDe = new CollectionDe();
 
@@ -21,11 +23,14 @@ public class CollectionDeTest extends TestCase {
      * @throws Exception
      */
 
+    @Test
     public void TestCalculer() throws Exception{
 
       for (int i= 0 ; i < 20 ; i++){
           tabDe.ajouter(new De(6));
           tabDe.ajouter(new De(7));
       }
+
+        assertTrue(tabDe.getTabDe().length>10);
     }
 }

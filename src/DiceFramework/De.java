@@ -16,6 +16,26 @@ public class De implements Comparable<De> {
     private int nbreFace;
     private int valeurCourant;
 
+    public int getNbreFace() {
+        return nbreFace;
+    }
+
+    public void setNbreFace(int nbreFace) {
+        this.nbreFace = nbreFace;
+    }
+
+    public int getValeurCourant() {
+        return valeurCourant;
+    }
+
+    public void setValeurCourant(int valeurCourant) {
+        this.valeurCourant = valeurCourant;
+    }
+
+    public static Random getRdm() {
+        return rdm;
+    }
+
     private final static Random rdm = new Random();
 
     public De(int nbFace) {
