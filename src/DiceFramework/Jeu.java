@@ -16,7 +16,15 @@ public class Jeu {
     private final int nbTours;
     private final IStrategieJeu strategieJeu;
     private int tourCourant;
-    
+
+    public Jeu() {
+        this.nbTours = 1;
+        this.tourCourant = 1;
+        this.joueurs = null;
+
+        this.strategieJeu = null;
+    }
+
     public Jeu(CollectionJoueur listJoueur, int nbT, IStrategieJeu strategie){
         this.tourCourant = 1;
         this.joueurs = listJoueur;
@@ -57,12 +65,25 @@ public class Jeu {
     public Joueur calculerLeVainqueur(){
         return this.strategieJeu.calculerLeVainqueur(this);
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+    public CollectionJoueur getJoueurs() {
+        return joueurs;
+    }
+
+    public int getNbTours() {
+        return nbTours;
+    }
+
+    public IStrategieJeu getStrategieJeu() {
+        return strategieJeu;
+    }
+
+    public int getTourCourant() {
+        return tourCourant;
+    }
+
+    public void setTourCourant(int tourCourant) {
+        this.tourCourant = tourCourant;
+    }
 }
